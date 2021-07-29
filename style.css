@@ -1,0 +1,183 @@
+/*Survey form stylling*/
+
+
+body{
+    text-align: center;
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 400;
+    background-color: rgb(77, 77, 192);
+    font-family: Rubik, sans-serif;
+    color: white;
+    line-height: 1.4;
+}
+
+
+body::before {
+  content: '';
+  position: fixed; /*Without this img won't be visible*/
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  /*rgba has a for opacity from 0 t0 1*/
+  background-image: linear-gradient(
+  115deg,rgba(40, 114, 108, 0.8),rgba(102, 40, 74, 0.7)),url(./survey-photo.jpg);
+  
+  height: 100%; /*To make the pic visible*/
+  width: 100%; /*To make the pic visible*/
+  background-size: cover; /*To make the pic adjusted to the page*/
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+h1 {
+  padding-top: 30px;
+  margin: 20px 0 0 0;
+}
+
+.form-group {
+  border-radius: 5px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+  }
+  
+
+#survey-form{
+    background-color: rgba(88, 31, 102, 0.8);
+    display: block;
+    padding: 1.5rem;
+    margin:0 auto;
+    border-radius:5px;
+    max-width: 600px;
+    margin-top: 30px;
+    
+}
+
+label{
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+
+button {
+  border: none;
+}
+
+
+p {
+  text-align: left;
+  font-size: 1.125rem;
+}
+
+#description {
+  text-align: center;
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control{
+    display: block;
+    padding: 0.375rem 0.75rem;
+    width: 100%; /*To make input full space*/
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius: 5px;
+    height: 2.375rem;
+    color: #0e0d0d;
+    background-color: white;
+    border: 1px solid #a8b1b9;
+
+  }
+
+  .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .input-radio,
+  .input-checkbox { /*to distance the radio text from radio box*/
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem; /*to style the checkbox cube*/
+    min-width: 1.25rem;
+  }
+  
+ 
+
+  .input-textarea {
+    min-height: 120px;
+    width: 100%;
+    resize: vertical;
+    padding: 0.625rem;
+    border-radius: 0.25rem;
+
+  }
+
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: rgb(105, 131, 105);
+    color: inherit;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: 2px solid rgb(105, 131, 105);
+
+  }
+
+
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
